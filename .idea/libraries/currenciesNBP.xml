@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="currenciesNBP">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/currenciesNBP.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
