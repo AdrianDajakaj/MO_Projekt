@@ -1,7 +1,9 @@
 import database.Database;
 import mainFrame.MainFrame;
+import registration.Register;
 import transfers.*;
 import  mainPanel.*;
+import registration.*;
 import java.awt.*;
 import java.io.IOException;
 import java.sql.Statement;
@@ -25,9 +27,12 @@ public class App {
         nadawcaDane.put("kod pocztowy","30-348");
         nadawcaDane.put("ulica","Grota-Roweckiego");
         nadawcaDane.put("nr domu","37/17");
-        Transfer t1 = new TransferFactory(new MainFrame(),nadawcaDane).getTransfer(TransferFactory.TransferType.ZLECENIESTALE);
+        //Transfer t1 = new TransferFactory(new MainFrame(),nadawcaDane).getTransfer(TransferFactory.TransferType.ZLECENIESTALE);
         //MainPanel m = new MainPanel(new MainFrame());
-        //Statement st = Database.connectToDatabase("BankManager", "root", "Adix_23/09/1999");
-        //Database.addUser(st,"user2","user2pass","user9@gmail.com");
+        //Statement st = Database.connectToDatabase("SystemBank", "root", "Adix_23/09/1999");
+        //Database.addUser(st,"user2","user2pass","user9@gmail.com","1234");
+        //new Register(new MainFrame());
+        //new registration.Register(new MainFrame());
+        new registration.Login(new MainFrame());
     }
 }

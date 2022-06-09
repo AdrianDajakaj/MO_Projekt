@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import mainPanel.MainPanel;
+import registration.Login;
+
 public class AppTimer {
         JLabel timeLabel;
         private int initMinutes = 2;
@@ -24,8 +26,7 @@ public class AppTimer {
                     elapsedTime=elapsedTime-1000;
                     if(elapsedTime==0) {
                         stop();
-                        MainPanel p = new MainPanel(frame);
-                        //nawrotka do panelu logowania
+                        Login l = new Login(frame);
                     }
                     minutes = (elapsedTime/60000) % 60;
                     seconds = (elapsedTime/1000) % 60;

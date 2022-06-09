@@ -9,15 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Map;
 
-
-/*
-data: nr. konra, imie, nazwisko, {adres: Miejscowosc, Kod pocztowy, ulica, Nr. domu/ mieszkania}
- */
-
-/*
-    danePrzelewu: tytuł, kwota, oplata, typ
- */
-
 public class TransferNextStep {
     private JLabel senderName;
     private JLabel senderSurname;

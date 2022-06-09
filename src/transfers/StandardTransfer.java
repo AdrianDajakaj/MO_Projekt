@@ -1,6 +1,8 @@
 package transfers;
 
 import mainFrame.MainFrame;
+import mainPanel.MainPanel;
+import registration.Login;
 import timer.*;
 import javax.swing.*;
 import javax.swing.text.AttributeSet;
@@ -84,9 +86,11 @@ public class StandardTransfer implements Transfer{
     protected String countryISO;
     protected boolean isCountry;
     protected MainFrame frame;
+    protected JPanel cancelPanel;
     public StandardTransfer(){}
-    public StandardTransfer(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+    public StandardTransfer(JPanel cancelPanel1,MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
         frame = mainFrame;
+        cancelPanel = cancelPanel1;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         transferPanel1.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
@@ -108,8 +112,7 @@ public class StandardTransfer implements Transfer{
         setExpressTransferRadioButton(expressTransferRadioButton);
         setReceiverAddressRadioButton(receiverAddressRadioButton);
         setNextButton(nextButton);
-        transferPanel1.revalidate();
-        frame.getjFrame().revalidate();
+        setCancelButton();
         frame.getjFrame().setContentPane(transferPanel1);
         frame.getjFrame().setVisible(true);
     }
@@ -481,39 +484,17 @@ public class StandardTransfer implements Transfer{
             }
         });
     }
-}
-
-
-
-class OnlyNumbers{
-    KeyAdapter keyAdapter;
-    public OnlyNumbers(){
-        keyAdapter = new KeyAdapter() {
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                if ( ((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
-                    e.consume();
-                }
+    void setCancelButton(){
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainPanel p = new MainPanel(senderData.get("username"),frame);
             }
-        };
+        });
     }
-
-    public KeyAdapter getKeyAdapter() {
-        return keyAdapter;
-    }
-}
-
-class LimitJTextField extends PlainDocument {
-    private final int max;
-    LimitJTextField(int max) {
-        super();
-        this.max = max;
-    }
-    public void insertString(int offset, String text, AttributeSet attr) throws BadLocationException {
-        if (text == null)
-            return;
-        if ((getLength() + text.length()) <= max) {
-            super.insertString(offset, text, attr);
-        }
+    public JPanel getPanel(){
+        return transferPanel1;
     }
 }
+
+

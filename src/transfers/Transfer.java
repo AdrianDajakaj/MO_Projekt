@@ -1,3 +1,7 @@
 package transfers;
 
-public interface Transfer {}
+import javax.swing.*;
+
+public interface Transfer {
+    public JPanel getPanel();
+}

@@ -1,12 +1,16 @@
 package transfers;
 
+import database.Database;
+import database.DatabaseStatement;
 import mainFrame.MainFrame;
+import mainPanel.MainPanel;
 import timer.AppTimer;
 import timer.MouseAction;
 
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
+import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
@@ -147,10 +151,64 @@ public class TransferConfirm {
                     }
                     else {
                         appCodeWarning.setVisible(false);
+                        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+                        LocalDateTime now = LocalDateTime.now();
+                        String generationDate = dtf.format(now);
+                        /*
+                        st.executeUpdate("insert into OutgoingHistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
+                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                         */
+                        if(transferPanelTitle.equals("Zlecenie stałe")){
+                            Database.addHistoryOrdinary(DatabaseStatement.st,"OutgoingHistoryOrdinary", generationDate, transferData.get("typ"),
+                                        senderData.get("nr konta"), receiverData.get("nr konta"),"",  Double.parseDouble(transferData.get("kwota")),
+                                        transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
+                                        transferData.get("startdata"), transferData.get("enddata"), Integer.parseInt(transferData.get("cykle")),
+                                        transferData.get("jednostkaczasu"),receiverData.get("nazwa odbiorcy"),receiverData.get("nazwa odbiorcy cd"),
+                                    receiverData.get("miejscowosc"),receiverData.get("kod pocztowy"),receiverData.get("ulica"),receiverData.get("nr domu"));
+                            double senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
+                            double transferAmount = Double.parseDouble(transferData.get("kwotaPLN"));
+                            senderAmount = senderAmount - transferAmount;
+                            Database.setOrdinaryAccountBalance(DatabaseStatement.st,senderData.get("username"),senderAmount);
+                        }
+                        else if(transferPanelTitle.equals("Przelew BLIK na telefon")){
+                            Database.addHistoryOrdinary(DatabaseStatement.st,"OutgoingHistoryOrdinary", generationDate, transferData.get("typ"),
+                                    senderData.get("nr konta"), receiverData.get("nr konta"),"",  Double.parseDouble(transferData.get("kwota")),
+                                    transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
+                                    "", "", 0,
+                                    "",receiverData.get("nazwa odbiorcy"),receiverData.get("nazwa odbiorcy cd"),
+                                    receiverData.get("miejscowosc"),receiverData.get("kod pocztowy"),receiverData.get("ulica"),receiverData.get("nr domu"));
+                            double senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
+                            double transferAmount = Double.parseDouble(transferData.get("kwota"));
+                            senderAmount = senderAmount - transferAmount;
+                            Database.setOrdinaryAccountBalance(DatabaseStatement.st,senderData.get("username"),senderAmount);
+                        }
+                        else if(transferPanelTitle.equals("Przelew własny")){
+                            Database.addHistoryOrdinary(DatabaseStatement.st,"OutgoingHistoryOrdinary", generationDate, transferData.get("typ"),
+                                    senderData.get("nr konta"), receiverData.get("nr konta"),"",  Double.parseDouble(transferData.get("kwota")),
+                                    transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
+                                    "", "", 0,
+                                    "",receiverData.get("nazwa odbiorcy"),receiverData.get("nazwa odbiorcy cd"),
+                                    receiverData.get("miejscowosc"),receiverData.get("kod pocztowy"),receiverData.get("ulica"),receiverData.get("nr domu"));
+                            double senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
+                            double transferAmount = Double.parseDouble(transferData.get("kwota"));
+                            senderAmount = senderAmount - transferAmount;
+                            Database.setOrdinaryAccountBalance(DatabaseStatement.st,senderData.get("username"),senderAmount);
+                        }
+                        else {
+                            Database.addHistoryOrdinary(DatabaseStatement.st,"OutgoingHistoryOrdinary", generationDate, transferData.get("typ"),
+                                    senderData.get("nr konta"), receiverData.get("nr konta"),"",  Double.parseDouble(transferData.get("kwota")),
+                                    transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
+                                    "", "", 0,
+                                    "",receiverData.get("nazwa odbiorcy"),receiverData.get("nazwa odbiorcy cd"),
+                                    receiverData.get("miejscowosc"),receiverData.get("kod pocztowy"),receiverData.get("ulica"),receiverData.get("nr domu"));
+                            double senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
+                            double transferAmount = Double.parseDouble(transferData.get("kwotaPLN"));
+                            senderAmount = senderAmount - transferAmount;
+                            Database.setOrdinaryAccountBalance(DatabaseStatement.st,senderData.get("username"),senderAmount);
+                        }
                         if(isTransferConfirmation){
-                            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
-                            LocalDateTime now = LocalDateTime.now();
-                            String generationDate = dtf.format(now);
                             if(transferPanelTitle.equals("Zlecenie stałe")) {
                                 try {
                                     pdfGenerator = new PdfFactory(generationDate,senderData,receiverData,transferData).getPdfGenerator(PdfFactory.PdfType.ZLECENIESTALE);
@@ -193,6 +251,7 @@ public class TransferConfirm {
                                 ioException.printStackTrace();
                             }
                         }
+                        MainPanel p = new MainPanel(senderData.get("username"),frame);
                     }
                 }
             }

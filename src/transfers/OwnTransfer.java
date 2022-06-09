@@ -1,6 +1,7 @@
 package transfers;
 
 import mainFrame.MainFrame;
+import mainPanel.MainPanel;
 import timer.AppTimer;
 import timer.MouseAction;
 
@@ -47,9 +48,11 @@ public class OwnTransfer implements Transfer{
     private Map<String,String> transferData;
     private Vector<Boolean> validation;
     private String choosedAcount="";
+    private JPanel cancelPanel;
 
-    public OwnTransfer(MainFrame mainFrame, Map<String,String> senderData1) {
+    public OwnTransfer(JPanel cancelPanel1,MainFrame mainFrame, Map<String,String> senderData1) {
         frame = mainFrame;
+        cancelPanel = cancelPanel1;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         OwnTransferPanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
@@ -70,9 +73,9 @@ public class OwnTransfer implements Transfer{
         setTransferAmountTxt(transferAmount1Txt);
         setTransferAmountTxt(transferAmount2Txt);
         setNextButton();
+        setCancelButton();
         frame.getjFrame().setContentPane(OwnTransferPanel);
         frame.getjFrame().setVisible(true);
-
     }
 
     void setjMenu(){
@@ -248,6 +251,17 @@ public class OwnTransfer implements Transfer{
                 }
             }
         });
+    }
+    void setCancelButton(){
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainPanel p = new MainPanel(senderData.get("username"),frame);
+            }
+        });
+    }
+    public JPanel getPanel(){
+        return OwnTransferPanel;
     }
 }
 

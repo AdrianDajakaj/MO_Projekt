@@ -18,8 +18,8 @@ public class ForeignStandardTransfer extends StandardTransfer implements Transfe
     private String currency;
     private double converter;
     private java.util.List<String> countriesISO;
-    ForeignStandardTransfer(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
-        super(mainFrame,senderData1);
+    ForeignStandardTransfer(JPanel cancelPanel,MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+        super(cancelPanel,mainFrame,senderData1);
         isCountry = true;
         panelTitleLabel.setText("Przelew zagraniczny");
         accountNumberCountryLabel.setVisible(false);

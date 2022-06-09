@@ -11,8 +11,8 @@ import java.util.Map;
 import java.util.Vector;
 
 public class StandingOrder extends StandardTransfer implements Transfer{
-    public StandingOrder(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
-        super(mainFrame,senderData1);
+    public StandingOrder(JPanel cancelPanel,MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+        super(cancelPanel,mainFrame,senderData1);
         panelTitleLabel.setText("Zlecenie stałe");
         expressTransferRadioButton.setVisible(false);
     }

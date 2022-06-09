@@ -1,6 +1,7 @@
 package transfers;
 
 import mainFrame.MainFrame;
+import mainPanel.MainPanel;
 import timer.AppTimer;
 import timer.MouseAction;
 
@@ -50,10 +51,12 @@ public class BlikPhoneTransfer implements Transfer{
     private double transferAmount2 = 0.0;
     private double finalTransferAmount = 0.0;
     private Vector<Boolean> validation;
+    private JPanel cancelPanel;
 
 
-    public BlikPhoneTransfer(MainFrame mainFrame, Map<String, String> senderData1) {
+    public BlikPhoneTransfer(JPanel cancelPanel1,MainFrame mainFrame, Map<String, String> senderData1) {
         frame = mainFrame;
+        cancelPanel = cancelPanel1;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         blikPhonePanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
@@ -69,6 +72,7 @@ public class BlikPhoneTransfer implements Transfer{
         setTransferAmountTxt(transferAmount2Txt);
         setPhoneNumberTxt();
         setNextButton();
+        setCancelButton();
         frame.getjFrame().setContentPane(blikPhonePanel);
         frame.getjFrame().setVisible(true);
     }
@@ -264,5 +268,16 @@ public class BlikPhoneTransfer implements Transfer{
                 }
             }
         });
+    }
+    void setCancelButton(){
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainPanel p = new MainPanel(senderData.get("username"),frame);
+            }
+        });
+    }
+    public JPanel getPanel(){
+        return blikPhonePanel;
     }
 }

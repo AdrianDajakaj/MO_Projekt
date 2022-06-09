@@ -1,11 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d83f0503-7d5a-4892-a826-a7468b59b803" name="Default Changelist" comment="Initial commit" />
+    <list default="true" id="d83f0503-7d5a-4892-a826-a7468b59b803" name="Default Changelist" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/src/database/DatabaseStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registration/Login.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registration/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registration/Register.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registration/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registration/SuccesfulRegister.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registration/SuccesfulRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfers/LimitJTextField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfers/OnlyNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/database/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/mainPanel/MainPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/mainPanel/MainPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/timer/AppTimer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/timer/AppTimer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/timer/AppTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/timer/AppTimer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/BlikPhoneTransfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/BlikPhoneTransfer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/BlikPhoneTransfer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/BlikPhoneTransfer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/BlikPhoneTransfer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/BlikPhoneTransfer$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/BlikPhoneTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/BlikPhoneTransfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/ForeignStandardTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/ForeignStandardTransfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/LimitJTextField.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/LimitJTextField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/MenuInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/MenuInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OnlyNumbers$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OnlyNumbers$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OnlyNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OnlyNumbers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/OwnTransfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/SampleMenuListenerAccount1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/SampleMenuListenerAccount1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/SampleMenuListenerAccount2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/SampleMenuListenerAccount2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandardTransfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandingOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/StandingOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/Transfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/Transfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferConfirm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferFactory$TransferType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferFactory$TransferType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferNextStep$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferNextStep$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferNextStep$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferNextStep$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferNextStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MO_Projekt/transfers/TransferNextStep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPanel/MainPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPanel/MainPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPanel/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPanel/MainPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timer/AppTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/timer/AppTimer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/Transfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -14,6 +90,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="2AHeMDp24OaxKybqCAqofUGD07l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -25,6 +102,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="160" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -43,13 +121,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -68,7 +148,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654670888611</updated>
-      <workItem from="1654670893925" duration="928000" />
+      <workItem from="1654670893925" duration="999000" />
+      <workItem from="1654733128228" duration="31779000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1654671283070</created>
@@ -91,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654671662463</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial commit">
+      <created>1654671835048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654671835048</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +195,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
